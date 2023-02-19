@@ -1,0 +1,8 @@
+@local_graphql_url=http://localhost:3000/api/graphql
+
+### getUsers - GraphQL query
+POST {{local_graphql_url}}
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+<@ ./src/pages/graphql/getUsers.graphql
