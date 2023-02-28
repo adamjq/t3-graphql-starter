@@ -14,12 +14,18 @@ Follow this [YouTube video to configure Supabase](https://www.youtube.com/watch?
 
 ## Development
 
-```terminal
+```bash
 npm install
 npx supabase start
 npx prisma migrate dev # or npx prisma db push
 npm run dev
 ```
+
+Run integration tests against a dockerized supabase with:
+```
+npm run test-e2e
+```
+
 ### API
 
 The GraphQL API uses [type-graphql](https://typegraphql.com/) and runs on the NextJS server on Vercel as a serverless function.

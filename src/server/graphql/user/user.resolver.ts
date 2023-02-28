@@ -1,13 +1,13 @@
 import "reflect-metadata";
 import { Resolver, Query } from "type-graphql";
 import  { User } from "./user.entity";
-import { prisma } from '../db'
+import { getUsers } from "../../service/user.service";
 
 @Resolver()
 export class UserResolver {
 
     @Query(() => [User])
     async users(): Promise<User[]> {
-        return await prisma.user.findMany() as User[];
+        return getUsers() as Promise<User[]>;
     }
 }
